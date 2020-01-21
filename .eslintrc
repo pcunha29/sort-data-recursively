@@ -1,0 +1,53 @@
+{
+	"extends": "airbnb",
+
+	"parser": "babel-eslint",
+
+	"overrides": [
+		{
+			"files": ["src/**/*.js"],
+			"env": {
+				"browser": true
+			}
+		},
+		{
+			"files": ["server/**/*.js"],
+			"env": {
+				"node": true
+			}
+		},
+		{
+			"files": ["**/*.test.js"],
+			"env": {
+				"jest": true,
+				"browser": true
+			}
+		}
+	],
+
+	"rules": {
+		"indent": [2, "tab"],
+		"max-len": [2, { "code": 100, "comments": 100 }],
+		"lines-around-comment": [
+			2,
+			{
+				"beforeBlockComment": true,
+				"beforeLineComment": true,
+				"allowBlockStart": true,
+				"allowBlockEnd": true
+			}
+		],
+		"function-paren-newline": ["error", "consistent"],
+		"import/extensions": [2, "always", { "ignorePackages": true }],
+		"import/no-named-as-default": ["false"],
+		"import/no-named-as-default-member": ["false"],
+		"react/prop-types": ["false"],
+		"jsx-a11y/anchor-is-valid": ["false"],
+		"react/jsx-indent": [2, "tab"],
+		"react/jsx-indent-props": [2, "tab"],
+		"no-tabs": "off",
+		"react/jsx-filename-extension": [1, { "extensions": [".js"] }],
+		"react/no-did-mount-set-state": ["false"],
+		"class-methods-use-this": "off"
+	}
+}
